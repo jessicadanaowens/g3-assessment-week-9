@@ -23,18 +23,11 @@ feature "ToDos" do
     expect(page).to have_content "ToDo added"
 
     within ".todos" do
-      expect(page).to have_content "Get a haircut"
-      #a user can edit an item
-
-      click_link "Edit item"
-
-      expect(page).to have_content "Get a haircut"
-
-      click_link "Edit item"
+    expect(page).to have_content "Get a haircut"
     end
 
-    # expect(page).to have_content "ToDo updated"
-
-
+    click_button "Complete"
+    expect(page).to have_content "ToDo Item Completed"
   end
 end
+

@@ -1,0 +1,11 @@
+<form action="/todos/<%= item.id %>" method="post">
+  <input type="hidden" name="_method" value="patch"/>
+  <ul>
+    <li>
+      <label for="message">Message:</label>
+      <input type="text" name="message" id="message" value="<%= item.body %>"/>
+    </li>
+    <input type="submit" value="Edit Item"/>
+    </li>
+  </ul>
+</form>
